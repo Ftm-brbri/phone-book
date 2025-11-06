@@ -22,8 +22,9 @@ export function Table() {
         element: "tbody",
         className: "",
         id: "tableBody",
-        children: [Tbody()],
+        // children: [Tbody()],
       }),
     ],
   });
 }
+Tbody();
