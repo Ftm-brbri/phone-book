@@ -21,6 +21,7 @@ export function Table() {
       El({
         element: "tbody",
         className: "",
+        id: "tableBody",
         children: [Tbody()],
       }),
     ],

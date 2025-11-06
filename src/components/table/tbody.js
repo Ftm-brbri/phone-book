@@ -1,11 +1,12 @@
 import { GetUserData } from "../../api/api";
 import { El } from "../../utils/el";
 
-let users = await GetUserData();
-console.log(users);
-export function Tbody() {
+export async function Tbody() {
+  const users = await GetUserData();
+  const tbody = document.getElementById("tableBody");
+
   users.forEach((user) => {
-    return El({
+    const tr = El({
       element: "tr",
       className: "",
       children: [
@@ -45,5 +46,7 @@ export function Tbody() {
         }),
       ],
     });
+    tbody.append(tr);
   });
+  return tbody;
 }
