@@ -1,7 +1,9 @@
 import { El } from "../../utils/el";
+import { Tbody } from "./tbody";
 import { Thead } from "./thead";
 
 export function Table() {
+  //   let users = [];
   return El({
     element: "table",
     className: "w-full border-none  mt-6 mx-3 ",
@@ -19,7 +21,7 @@ export function Table() {
       El({
         element: "tbody",
         className: "",
-        children: [],
+        children: [Tbody()],
       }),
     ],
   });
